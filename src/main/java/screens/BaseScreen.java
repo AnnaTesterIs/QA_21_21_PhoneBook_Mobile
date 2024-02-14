@@ -18,9 +18,10 @@ public class BaseScreen {
     }
 
     public void type(MobileElement element, String text) {
+
+        element.click();
+        element.clear();
         if (text != null) {
-            element.click();
-            element.clear();
             element.sendKeys(text);
         }
         driver.hideKeyboard();
